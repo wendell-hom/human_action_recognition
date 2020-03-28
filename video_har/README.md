@@ -8,7 +8,7 @@ The third model is a 3D version of the ResNeXt-101, a deep 3D CNN that was used 
 
 ## Results of Validation Set
 
-These runs were done using Adam Optimizer
+These runs were done using Adam Optimizer with lr = 0.0001, and reduced to 0.00005 and then 0.00001 when loss saturated.
 
 |               |  15-category  |  27-category  |    600-category
 |---------------|---------------| --------------|-----------------
