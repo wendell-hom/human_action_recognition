@@ -7,6 +7,9 @@ Possible differences might be change in
 * framework
 * models here do not include the extra Conv2d layer + Global Average Pooling used in the Keras models
 
+
+## Training Logs
+
 VGG16 training results:
 
 
