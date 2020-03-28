@@ -20,7 +20,7 @@ VGG19 training results:
 
 MobileNet-V2 training results:
 
-<img src="images/mobilenet-v2.jpg" />
+<img src="images/mobilenet-v2.png" />
 
 ResNet-50 training results.  Validation accuracy: 82.8%, strangely a lot better than the version using Keras where the accuracy was as good as guessing.
 
