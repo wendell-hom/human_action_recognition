@@ -1,6 +1,6 @@
 # Human Action Recognition for Still Images
 
-The keras_ipynb/ directory contains the runs for all models that uses the Keras framework.
+VGG16 training results:
 
-The pytorch/ directory is a rewrite of the image HAR using pytorch code and is work under progress.
-
+![Image of VGG16 training]
+(./images/vgg16.png)
