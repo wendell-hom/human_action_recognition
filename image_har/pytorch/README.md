@@ -2,4 +2,4 @@
 
 VGG16 training results:
 
-![Image of VGG16 training](images/vgg16.png)
+![VGG-16 accuracy](images/vgg16_acc.png) ![VGG-16 loss](images/vgg16_loss.png)
