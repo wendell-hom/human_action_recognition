@@ -1,9 +1,6 @@
 # Human Action Recognition for Videos
 
-For Human Action Recognition with Videos, three different models were evaluated.
-The first model uses a 2D CNN we fine-tuned from the image action recognition protion of this project.
-The second model is the C3D architecture, a shallow 3D CNN that was mentioned in the paper by Tran et-el.
-The third model is a 3D version of the ResNeXt-101, a deep 3D CNN that was used in the paper by Hara et-el.
+For Human Action Recognition with Videos, three different models were evaluated: a 2D CNN, a shallow 3D CNN and a deep 3D CNN.
 
 ## Datasets
 
@@ -14,6 +11,17 @@ As an extra challenge, the full Kinetics-600 dataset was downloaded with ~350,00
 Videos are highly compressed, to reduce data pipeline latency, these files were uncompressed and stored as h5py files, with one file per category per training + validation set.  i.e., 600 h5py files for training data and 600 h5py files for validation data.  Total disk space required was ~ 4TB.  SSDs were used to keep read latency to a reasonable times.
 
 To keep GPUs from being starved from data, the training code uses `use_multiprocessing= True, num_workers = 12` 
+
+## Models
+
+The 2D CNN model came from the Inception-ResNet-v2 model that was fined tuned on the Stanford 40 action dataset from the still image action recognition of this project.
+
+The 3D shallow CNN is the C3D architecture that was mentioned in the paper by Tran et-el.
+
+<img src="images/C3D.png" />
+
+The Deep 3D CNN is a 3D version of the ResNeXt-101, a deep 3D CNN that was used in the paper by Hara et-el.
+
 
 ## Mixed precision 16-bit floating point 
 
