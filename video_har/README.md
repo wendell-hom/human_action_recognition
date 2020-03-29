@@ -21,4 +21,4 @@ These runs were done using Adam Optimizer with lr = 0.0001, and reduced to 0.000
 
 Training using the SGD Optimizer with lr = 0.1, decay = 0.001, and momentum = 0.9 was also launched for the ResNeXt-101 architecture on the full Kinetics-600 dataset.
 
-Accuracy is currently at 28.1%
+Accuracy is currently at 28.7% on the 48th epoch, at about 3 hrs per epoch.
