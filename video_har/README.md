@@ -13,6 +13,8 @@ As an extra challenge, the full Kinetics-600 dataset was downloaded with ~350,00
 
 Videos are highly compressed, to reduce data pipeline latency, these files were uncompressed and stored as h5py files, with one file per category per training + validation set.  i.e., 600 h5py files for training data and 600 h5py files for validation data.  Total disk space required was ~ 4TB.  SSDs were used to keep read latency to a reasonable times.
 
+To keep GPUs from being starved from data, the training code uses `use_multiprocessing= True, num_workers = 12` 
+
 ## Mixed precision 16-bit floating point 
 
 To increase batch size and reduce runtime, mixed precision floating point was used for models.
@@ -22,13 +24,13 @@ tf.keras.mixed_precision.experimental.set_policy('mixed_float16')
 ```
 
 To avoid numerical underflow and overflow, batchnorm and softmax layers retained the original 32-bit floating point dtype.
-This change was most useful for the Deep 3D CNN ResNeXt-101 model which could have fit mini-batch size of 37 in memory on a RTX Titan card with 24 GB of memory.  Turning on mixed-precision allowed up to a mini-batch size of 80 and significantly reduce runtime from 11+ hrs down to 3 hrs for one epoch (just the training examples, validation was run separtely)
+This change was most useful for the Deep 3D CNN ResNeXt-101 model which could have fit mini-batch size of 37 in memory on a RTX Titan card with 24 GB of memory.  Turning on mixed-precision allowed up to a mini-batch size of 80 and significantly reduce runtime from 11+ hrs down to 3 hrs for one epoch (just the training examples, validation was run separately)
 
 ## Issues
 
-Tensorflow 2.1 + Keras had a memory leak (which is now fixed with ).
-Tensorflow 2.2 now has the fix, but training seemed slower by a few hrs per epoch when I tried it.
-Currently working around the memory issue by allocating 1.4 TB of disk space as swap.
+* Tensorflow 2.1 + Keras had a [memory leak](https://github.com/tensorflow/tensorflow/issues/37515) (which is now fixed with  ) but might require manually building tensorflow libraries which may be difficult due to dependencies.  Currently using conda install tensorflow-gpu.
+* Tensorflow 2.2 now has the fix, but training seemed slower by a few hrs per epoch when I tried it.
+* Currently working around the memory issue by allocating 1.4 TB of disk space as swap. (200-300 GBs is not enough and fills up overnight)
 
 
 ## Results of Validation Set
