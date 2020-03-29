@@ -12,6 +12,7 @@ Below is the accuracy on the validation set of a number of models that were fine
 
 ## Confusion Matrix
 Below is the confusion matrix for two different models, ResNet-50 on the left, and Inception-ResNet-v2 on the right.
+The results for the ResNet-50 was terrible, as you can see from the confusion matrix it was simply picking one category for all images it did not see in the training set.  On the other hand, the ResNet-50 model from the pytorch version performed very well.  This could be due to a number of factors including better augmentation, different batch size, and differences in the models or trained weights between the Keras vs. torchvision model.
 
 <img src="images/ResNet-50_cmat.png" width="45%"/><img src="images/Inception_ResNet_v2.png" width="45%" />
 
