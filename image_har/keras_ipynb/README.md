@@ -4,6 +4,12 @@ Image action recognition was initially implemented using the Keras framework, an
 account of all models and their results.  On the other hand, the models that were fine-tuned using the pytorch framework currently have accuracy rates that are higher than their Keras counterparts for the same input resolution.
 
 
+## Results
+
+Below is the accuracy on the validation set of a number of models that were fine-tuned using the Stanford40 dataset
+
+<img src="images/image_results_table.png">
+
 ## Confusion Matrix
 Below is the confusion matrix for two different models, ResNet-50 on the left, and Inception-ResNet-v2 on the right.
 
