@@ -56,8 +56,13 @@ These runs were done using Adam Optimizer with lr = 0.0001, and reduced to 0.000
 
 Training using the SGD Optimizer with lr = 0.1, decay = 0.001, and momentum = 0.9 was also launched for the ResNeXt-101 architecture on the full Kinetics-600 dataset.
 
-Accuracy on the validation set is currently at 28.7% on the 48th epoch, at about 3 hrs per epoch.
-Will try to reduce learning rate on the 50th epoch.  
+Accuracy on the validation set was at 28.9% at the end of the 50th epoch.
+
+Learning rate was modified to 0.01 starting on the 51st epoch.
+Accuracy is currently ate 29.6% on the 52nd epoch.
+
+
+
 
 ## Future Work
 * add additional augmentation for the videos.
