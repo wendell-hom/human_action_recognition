@@ -12,6 +12,7 @@ Possible differences might be change in
 * ResNet-50 acc 82.8% @ 224x224x3
 * ResNet-50 acc 88.3% @ 500x500x3
 
+* ResNeXt-101 acc 90.0% @ 500x500x3
 
 ## Training Logs
 
