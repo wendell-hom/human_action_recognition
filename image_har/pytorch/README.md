@@ -17,6 +17,7 @@ Training was run with the input set to 224x224 RGB images as well as 500x500 RG 
 ---------------|------------|--------------
 VGG-16         |    224/500 |    79.4% / -
 VGG-19         |    224/500 |    78.0% / -
+MobileNet-v2   |    224/500 |    76.9% / -
 ResNet-50      |    224/500 |    82.8% / 88.3%
 ResNeXt-50     |    224/500 |    83.5% / 90.0%
 ResNeXt-101    |    224/500 |        - / -
