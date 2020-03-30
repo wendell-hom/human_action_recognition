@@ -7,6 +7,11 @@ Possible differences might be change in
 * framework
 * models here do not include the extra Conv2d layer + Global Average Pooling used in the Keras models
 
+## Results
+
+ResNet-50 acc 82.8% @ 224x224x3
+ResNet-50 acc 88.3% @ 500x500x3
+
 
 ## Training Logs
 
