@@ -9,14 +9,16 @@ Possible differences might be change in
 
 ## Results
 
-* ResNet-50 acc 82.8% @ 224x224x3
-* ResNet-50 acc 88.3% @ 500x500x3
+In the table below, pixels represents the spatial resolution of the input to a model.
+Training was run with the input set to 224x224 RGB images as well as 500x500 RG images.
 
-* ResNeXt-50 acc  ?    @ 224x224x3
-* ResNeXt-50 acc 90.0% @ 500x500x3
 
-* ResNeXt-101 acc  ?    @ 224x224x3
-* ResNeXt-101 acc  ?    @ 500x500x3
+  Model        |    Pixels  |   Accuracy
+---------------|------------|--------------
+ResNet-50      |    224/500 |    82.8% / 88.3%
+ResNeXt-50     |    224/500 |        ? / 90.0%
+ResNeXt-101    |    224/500 |        ? / ?
+
 
 
 ## Training Logs
