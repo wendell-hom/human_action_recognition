@@ -7,6 +7,10 @@ Possible differences might be change in
 * framework
 * models here do not include the extra Conv2d layer + Global Average Pooling used in the Keras models
 
+... Turns out that I forgot to replace the last layer's 1000-way softmax with a 40-way softmax -- yet the models still did surprisingly well.  May get an additional boost in accuracy if I re-run with a 40-way softmax as the output layer.  
+
+Additionally, I forgot to freeze the parameters of all other layers as well.  Since the models still performed well, actually even better than the Keras counterparts where the layers were frozen, it seems that the Stanford 40 action is large enough that no layers need to be frozen.  Should re-run also these parameters frozen as well to see how that affects accuracy.
+
 ## Results
 
 In the table below, pixels represents the spatial resolution of the input to a model.
