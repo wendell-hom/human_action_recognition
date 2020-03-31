@@ -11,11 +11,13 @@ Possible differences might be change in
 
 Additionally, I forgot to freeze the parameters of all other layers as well.  Since the models still performed well, actually even better than the Keras counterparts where the layers were frozen, it seems that the Stanford 40 action is large enough that no layers need to be frozen.  Should re-run also these parameters frozen as well to see how that affects accuracy.
 
-## Results
+## Results 
 
 In the table below, pixels represents the spatial resolution of the input to a model.
 Training was run with the input set to 224x224 RGB images as well as 500x500 RG images.
 
+These are the results for the model that still uses a 1000-way softmax (all layers trainable)
+The model still did surprisingly well.
 
   Model        |    Pixels  |   Accuracy
 ---------------|------------|--------------
@@ -26,6 +28,20 @@ ResNet-50      |    224/500 |    82.8% / 88.3%
 ResNeXt-50     |    224/500 |    83.5% / 90.0%
 ResNeXt-101    |    224/500 |    85.5% / 90.4%
 DenseNet-121   |    224/500 |    82.3% / 88.4%
+
+The results after replacing the final layer with a 40-way softmax (all layers trainable)
+Need to re-run to fill in results.
+
+  Model        |    Pixels  |   Accuracy
+---------------|------------|--------------
+VGG-16         |    224/500 |    - / -
+VGG-19         |    224/500 |    - / -
+MobileNet-v2   |    224/500 |    79.0% / -
+ResNet-50      |    224/500 |    - / -
+ResNeXt-50     |    224/500 |    - / -
+ResNeXt-101    |    224/500 |    - / -
+DenseNet-121   |    224/500 |    - / -
+
 
 
 ## Training Logs
