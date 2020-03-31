@@ -30,14 +30,14 @@ ResNeXt-101    |    224/500 |    85.5% / 90.4%
 DenseNet-121   |    224/500 |    82.3% / 88.4%
 
 The results after replacing the final layer with a 40-way softmax (all layers trainable)
-Need to re-run to fill in results.  So far, it doesn't seem to make much of a difference and differences may be due to randomness.
+Need to re-run to fill in results.  
 
   Model        |    Pixels  |   Accuracy
 ---------------|------------|--------------
 VGG-16         |    224/500 |    79.7% / -
-VGG-19         |    224/500 |    - / -
+VGG-19         |    224/500 |    80.9% / -
 MobileNet-v2   |    224/500 |    79.0% / -
-ResNet-50      |    224/500 |    - / -
+ResNet-50      |    224/500 |    - / 89.0%
 ResNeXt-50     |    224/500 |    - / -
 ResNeXt-101    |    224/500 |    - / 90.7%
 DenseNet-121   |    224/500 |    - / 87.1%
