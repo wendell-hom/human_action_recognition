@@ -34,13 +34,13 @@ Need to re-run to fill in results.
 
   Model        |    Pixels  |   Accuracy
 ---------------|------------|--------------
-VGG-16         |    224/500 |    - / -
+VGG-16         |    224/500 |    79.7% / -
 VGG-19         |    224/500 |    - / -
 MobileNet-v2   |    224/500 |    79.0% / -
 ResNet-50      |    224/500 |    - / -
 ResNeXt-50     |    224/500 |    - / -
 ResNeXt-101    |    224/500 |    - / 90.7%
-DenseNet-121   |    224/500 |    - / -
+DenseNet-121   |    224/500 |    - / 87.1%
 
 
 
