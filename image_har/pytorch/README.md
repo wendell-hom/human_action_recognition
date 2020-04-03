@@ -30,7 +30,7 @@ ResNeXt-101    |    224/500 |    85.5% / 90.4%
 DenseNet-121   |    224/500 |    82.3% / 88.4%
 
 The results after replacing the final layer with a 40-way softmax (all layers trainable)
-Need to re-run to fill in results.  
+
 
   Model        |    Pixels  |   Accuracy
 ---------------|------------|--------------
